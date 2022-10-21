@@ -1,0 +1,35 @@
+<div class="row">
+ <div class="col-md-2">
+   <ul>
+     <li>
+       <a> Author </a>
+     </li>
+     <li>
+       <a> Fav Author </a>
+     </li>
+   </ul>
+ </div>
+
+  <div  class="col-md-10">
+
+  <div>
+    <div class="card" *ngFor="let author of authorList,let i=index">
+      <div class="container">
+        <h4><b>Bio</b></h4>
+        <p>{{author.bio}}</p>
+        <h4><b>Name</b></h4>
+        <p>{{author.name}}</p>
+        <button (click)="statusChange(i)">
+          <span> {{author.status === true ? 'Remove fav' : ' Add Favorite'}}  </span>
+        </button>
+      </div>
+    </div>
+
+    <button (click)="loadData(10,skip+10)" l>
+      Next
+    </button>
+
+  </div>
+  </div>
+
+</div>
